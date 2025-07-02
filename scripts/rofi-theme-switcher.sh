@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEME_DIR="$HOME/.config/rofi/themes"
+THEME_DIR="$HOME/.config/rofi/colors"
 COLOR_FILE="$HOME/.config/rofi/color.rasi"
 
 # List available themes

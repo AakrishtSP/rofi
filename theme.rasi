@@ -39,7 +39,6 @@ listview {
     fixed-height: true;
 }
 
-// Element styles (disable zebra pattern)
 element {
     orientation: horizontal;
     padding: 10px;
@@ -49,6 +48,5 @@ element {
 
 }
 
-
-
 @import "color.rasi"
+@import "~/.config/rofi/style.rasi"
