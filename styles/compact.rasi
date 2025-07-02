@@ -1,0 +1,44 @@
+/**
+ * Compact Style - Based on common.rasi with smaller dimensions
+ */
+
+@import "common.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+window {
+    width: 500px;
+    border-radius: 4px;
+}
+
+mainbox {
+    padding: 15px;
+    spacing: 8px;
+}
+
+inputbar {
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+listview {
+    lines: 6;
+    spacing: 2px;
+}
+
+element {
+    padding: 6px;
+    border-radius: 3px;
+    spacing: 6px;
+}
+
+element-icon {
+    size: 16px;
+}
+
+button {
+    padding: 6px 12px;
+    border-radius: 3px;
+}

@@ -1,53 +1,12 @@
-/* ==========================================================================
-   File: gruvbox-common.rasi
-   Desc: Shared rules between all gruvbox themes
-   Author: bardisty <b@bah.im>
-   Source: https://github.com/bardisty/gruvbox-rofi
-   Modified: Mon Feb 12 2018 06:06:47 PST -0800
-   ========================================================================== */
+/******************************************************************************
+ * Gruvbox Common Definitions
+ * Shared definitions between all gruvbox themes - converted to color-only format
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: bardisty
+ ******************************************************************************/
 
-window {
-    background-color: @background;
-    border:           2;
-    padding:          2;
-}
-
-mainbox {
-    border:  0;
-    padding: 0;
-}
-
-message {
-    border:       2px 0 0;
-    border-color: @separatorcolor;
-    padding:      1px;
-}
-
-textbox {
-    highlight:  @highlight;
-    text-color: @foreground;
-}
-
-listview {
-    border:       2px 0 0;
-    padding:      2px 0 0;
-    border-color: @separatorcolor;
-    spacing:      2px;
-    scrollbar:    @scrollbar;
-}
-
-element {
-    border:  0;
-    padding: 2px;
-}
-
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-}
-
-element.normal.urgent {
-    background-color: @urgent-background;
+/* This file has been converted to color-only format.
+   Use individual gruvbox theme files instead. */
     text-color:       @urgent-foreground;
 }
 

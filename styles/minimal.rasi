@@ -1,0 +1,41 @@
+/**
+ * Minimal Style - Based on common.rasi with minimal borders and spacing
+ */
+
+@import "common.rasi"
+
+window {
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+mainbox {
+    padding: 10px;
+    spacing: 5px;
+}
+
+inputbar {
+    border: 0px solid;
+    border-radius: 0px;
+    padding: 8px;
+}
+
+listview {
+    spacing: 1px;
+}
+
+element {
+    border-radius: 0px;
+    padding: 8px;
+    spacing: 8px;
+}
+
+button {
+    border: 0px solid;
+    border-radius: 0px;
+    padding: 8px 16px;
+}
+
+scrollbar {
+    border-radius: 0px;
+}

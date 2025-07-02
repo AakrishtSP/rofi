@@ -1,235 +1,74 @@
 /******************************************************************************
- * ROFI Color theme - Monokai Pro Enhanced
- * Colors adapted from: https://monokai.pro/
+ * Monokai Pro Color Scheme for Rofi
+ * Professional dark theme with vibrant accents
  * Author: Aakrisht Sharma Paudel (AakrishtSP)
- * Github: @AakrishtSP
+ * Based on: https://monokai.pro/
  ******************************************************************************/
+
 * {
-    // Monokai Pro Color Palette
-    background:     #2D2A2E;
-    foreground:     #FCFCFA;
-    selection:      #5B595C;
-    comment:        #727072;
-    red:            #FF6188;
-    orange:         #FC9867;
-    yellow:         #FFD866;
-    green:          #A9DC76;
-    blue:           #78DCE8;
-    purple:         #AB9DF2;
-    cyan:           #78DCE8;
-    pink:           #FF6188;
-    
-    // Additional shades
-    background-alt: #403E41;
-    surface:        #423F42;
-    overlay:        #5B595C;
-    text-dim:       #939293;
-    accent:         #FFD866;
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
 
-    // Derived Theme Variables
-    normal-foreground:           @foreground;
-    selected-normal-foreground:  @background;
-    urgent-foreground:           @red;
-    active-foreground:           @green;
-    selected-urgent-foreground:  @background;
-    selected-active-foreground:  @background;
+******************************************************************************/
+
+    /* Monokai Pro color palette */
+    monokai-background:     #2D2A2E;
+    monokai-foreground:     #FCFCFA;
+    monokai-selection:      #5B595C;
+    monokai-comment:        #727072;
+    monokai-red:            #FF6188;
+    monokai-orange:         #FC9867;
+    monokai-yellow:         #FFD866;
+    monokai-green:          #A9DC76;
+    monokai-blue:           #78DCE8;
+    monokai-purple:         #AB9DF2;
+    monokai-cyan:           #78DCE8;
+    monokai-pink:           #FF6188;
+    background-alt:         #403E41;
+    monokai-surface:        #423F42;
+    monokai-overlay:        #5B595C;
+    text-dim:               #939293;
+    monokai-accent:         #FFD866;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
+    background:                  @monokai-background;
+    background-color:            @monokai-background;
+    foreground:                  @monokai-foreground;
+    border-color:                @monokai-overlay;
+    separatorcolor:              @monokai-overlay;
     
-    normal-background:           @background;
-    selected-normal-background:  @accent;
-    urgent-background:           @background;
-    active-background:           @surface;
-    selected-urgent-background:  @red;
-    selected-active-background:  @green;
-    
-    // Alternating pattern colors
+    /* Text colors */
+    normal-background:           @monokai-background;
+    normal-foreground:           @monokai-foreground;
     alternate-normal-background: @background-alt;
-    alternate-normal-foreground: @normal-foreground;
-    alternate-urgent-background: @background-alt;
-    alternate-urgent-foreground: @urgent-foreground;
+    alternate-normal-foreground: @monokai-foreground;
+    selected-normal-background:  @monokai-accent;
+    selected-normal-foreground:  @monokai-background;
+    
+    active-background:           @monokai-surface;
+    active-foreground:           @monokai-green;
     alternate-active-background: @background-alt;
-    alternate-active-foreground: @active-foreground;
+    alternate-active-foreground: @monokai-green;
+    selected-active-background:  @monokai-green;
+    selected-active-foreground:  @monokai-background;
     
-    separatorcolor:              @overlay;
-    bordercolor:                 @overlay;
-    border-color:                @overlay;
-    
-    spacing:                     2;
-    background-color:            @background;
-    
-    highlight:                   @purple;
-    subtle-text:                 @text-dim;
-}
-
-window {
-    background-color: @background;
-    border:           1;
-    border-color:     @overlay;
-    border-radius:    8;
-    padding:          15;
-    width:            600;
-}
-
-mainbox {
-    border:  0;
-    padding: 0;
-}
-
-message {
-    border:        1;
-    border-color:  @overlay;
-    padding:       8 0;
-    margin:        0 0 5 0;
-}
-
-textbox {
-    text-color: @foreground;
-    font:       "JetBrains Mono 12";
-}
-
-listview {
-    fixed-height: 0;
-    border:       1;
-    border-color: @overlay;
-    spacing:      3;
-    scrollbar:    true;
-    padding:      8 0 0 0;
-    margin:       5 0;
-    dynamic:      true;
-}
-
-element {
-    border:  0;
-    padding: 8 12;
-    border-radius: 4;
-    margin:  2 0;
-}
-
-element-text {
-    background-color: inherit;
-    text-color:       inherit;
-    vertical-align:   0.5;
-}
-
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-    font:             "Fira Sans Bold 14";
-}
-
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-    border-left:      3;
-    border-color:     @highlight;
-    font:             "Fira Sans Bold 14";
-}
-
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-    border-left:      3;
-    border-color:     @purple;
-    font:             "Fira Sans Bold 14";
-}
-
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-    border-left:      3;
-    border-color:     @blue;
-    font:             "Fira Sans Bold 14";
-}
-
-element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-    font:             "Fira Sans Bold 14";
-}
-
-element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-    font:             "Fira Sans 14";
-}
-
-scrollbar {
-    width:        6;
-    border:       0;
-    handle-color: @purple;
-    handle-width: 8;
-    padding:      0;
-}
-
-inputbar {
-    spacing:    0;
-    text-color: @foreground;
-    padding:    10;
-    background: @background-alt;
-    border-radius: 6;
-    margin:     0 0 10 0;
-    children:   [ prompt, textbox-prompt-colon, entry, case-indicator ];
-}
-
-textbox-prompt-colon {
-    expand:     false;
-    str:        "❯";
-    margin:     0 10 0 5;
-    text-color: @purple;
-    font:       "Symbols Nerd Font 16";
-}
-
-entry {
-    text-color:   @foreground;
-    font:         "Fira Sans 14";
-    cursor:       text;
-    cursor-color: @accent;
-}
-
-prompt {
-    text-color: @accent;
-    font:       "Fira Sans Bold 14";
-}
-
-case-indicator {
-    text-color: @text-dim;
-    margin:     0 0 0 10;
-}
-
-mode-switcher {
-    border:       2;
-    border-color: @overlay;
-    padding:      8;
-    margin:       10 0 0 0;
-}
-
-button {
-    padding:      5 10;
-    border-radius: 4;
-    font:         "Fira Sans 14";
-}
-
-button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-    border-bottom:    2;
-    border-color:     @accent;
-    font:             "Fira Sans Bold 14";
+    urgent-background:           @monokai-background;
+    urgent-foreground:           @monokai-red;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @monokai-red;
+    selected-urgent-background:  @monokai-red;
+    selected-urgent-foreground:  @monokai-background;
 }

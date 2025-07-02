@@ -1,3 +1,9 @@
+/**
+ * Simple Style with Icons - Based on common.rasi
+ */
+
+@import "common.rasi"
+
 configuration {
     show-icons: true;
 }

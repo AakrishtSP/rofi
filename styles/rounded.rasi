@@ -1,0 +1,33 @@
+/**
+ * Rounded Style - Based on common.rasi with extra rounded corners
+ */
+
+@import "common.rasi"
+
+window {
+    border-radius: 16px;
+}
+
+inputbar {
+    border-radius: 12px;
+}
+
+listview {
+    border-radius: 8px;
+}
+
+element {
+    border-radius: 8px;
+}
+
+button {
+    border-radius: 8px;
+}
+
+scrollbar {
+    border-radius: 8px;
+}
+
+error-message {
+    border-radius: 12px;
+}

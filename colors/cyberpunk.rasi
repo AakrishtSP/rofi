@@ -1,11 +1,23 @@
 /******************************************************************************
- * ROFI Color theme - Cyberpunk Enhanced
+ * Cyberpunk Enhanced Color Scheme for Rofi
+ * Neon-inspired cyberpunk aesthetic with electric colors
  * Author: Aakrisht Sharma Paudel (AakrishtSP)
  * Github: @AakrishtSP
  ******************************************************************************/
+
 * {
-    // Cyberpunk Color Palette
-    background:     #000B1E;
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Cyberpunk color palette */
+    background-dark: #000B1E;
     dark-layer:     #0A1528;
     deeper:         #051019;
     neon-cyan:      #0ABDC6;
@@ -18,207 +30,50 @@
     grid-layer:     #1A2332;
     border-glow:    #2A3342;
 
-    // Derived Theme Variables
-    foreground:                  @neon-cyan;
-    normal-foreground:           @neon-cyan;
-    selected-normal-foreground:  @background;
-    urgent-foreground:           #FF0000;
-    active-foreground:           @neon-green;
-    selected-urgent-foreground:  @background;
-    selected-active-foreground:  @background;
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
     
-    background:                  @background;
-    normal-background:           @background;
-    selected-normal-background:  @electric-blue;
-    urgent-background:           @background;
-    active-background:           @grid-layer;
-    selected-urgent-background:  #FF0000;
-    selected-active-background:  @neon-green;
+    /* Basic colors */
+    background:              @background-dark;
+    background-alt:          @dark-layer;
+    foreground:              @neon-cyan;
+    selected:                @electric-blue;
+    active:                  @neon-green;
+    urgent:                  #FF0000;
     
-    // Alternating pattern colors
-    alternate-normal-background: @dark-layer;
-    alternate-normal-foreground: @normal-foreground;
-    alternate-urgent-background: @dark-layer;
-    alternate-urgent-foreground: @urgent-foreground;
-    alternate-active-background: @dark-layer;
-    alternate-active-foreground: @active-foreground;
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @border-glow;
+    separatorcolor:          @border-glow;
+    scrollbar-handle:        @grid-layer;
     
-    separatorcolor:              @border-glow;
-    bordercolor:                 @border-glow;
-    border-color:                @border-glow;
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @dim-cyan;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @background-dark;
     
-    spacing:                     2;
-    background-color:            @background;
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @background-dark;
     
-    highlight:                   @neon-purple;
-    subtle-text:                 @dim-cyan;
-}
-
-window {
-    background-color: @background;
-    border:           1;
-    border-color:     @border-glow;
-    border-radius:    8;
-    padding:          15;
-    width:            600;
-}
-
-mainbox {
-    border:  0;
-    padding: 0;
-}
-
-message {
-    border:        1;
-    border-color:  @border-glow;
-    padding:       8 0;
-    margin:        0 0 5 0;
-}
-
-textbox {
-    text-color: @neon-cyan;
-    font:       "JetBrains Mono 12";
-}
-
-listview {
-    fixed-height: 0;
-    border:       1;
-    border-color: @border-glow;
-    spacing:      3;
-    scrollbar:    true;
-    padding:      8 0 0 0;
-    margin:       5 0;
-    dynamic:      true;
-}
-
-element {
-    border:  0;
-    padding: 8 12;
-    border-radius: 4;
-    margin:  2 0;
-}
-
-element-text {
-    background-color: inherit;
-    text-color:       inherit;
-    vertical-align:   0.5;
-}
-
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-    font:             "Fira Sans Bold 14";
-}
-
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-    border-left:      3;
-    border-color:     @highlight;
-}
-
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-    border-left:      3;
-    border-color:     @neon-pink;
-}
-
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-    border-left:      3;
-    border-color:     @bright-blue;
-}
-
-element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @normal-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @urgent-foreground;
-    font:             "Fira Sans Bold 14";
-}
-
-element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @active-foreground;
-    font:             "Fira Sans 14";
-}
-
-scrollbar {
-    width:        6;
-    border:       0;
-    handle-color: @neon-purple;
-    handle-width: 8;
-    padding:      0;
-}
-
-inputbar {
-    spacing:    0;
-    text-color: @neon-cyan;
-    padding:    10;
-    background: @dark-layer;
-    border-radius: 6;
-    margin:     0 0 10 0;
-    children:   [ prompt, textbox-prompt-colon, entry, case-indicator ];
-}
-
-textbox-prompt-colon {
-    expand:     false;
-    str:        "❯";
-    margin:     0 10 0 5;
-    text-color: @neon-purple;
-    font:       "Symbols Nerd Font 16";
-}
-
-entry {
-    text-color:   @neon-cyan;
-    font:         "Fira Sans 14";
-    cursor:       text;
-    cursor-color: @electric-blue;
-}
-
-prompt {
-    text-color: @electric-blue;
-    font:       "Fira Sans Bold 14";
-}
-
-case-indicator {
-    text-color: @dim-cyan;
-    margin:     0 0 0 10;
-}
-
-mode-switcher {
-    border:       2;
-    border-color: @border-glow;
-    padding:      8;
-    margin:       10 0 0 0;
-}
-
-button {
-    padding:      5 10;
-    border-radius: 4;
-}
-
-button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-    border-bottom:    2;
-    border-color:     @electric-blue;
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @background-dark;
 }

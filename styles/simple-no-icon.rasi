@@ -1,3 +1,9 @@
+/**
+ * Simple Style without Icons - Based on common.rasi
+ */
+
+@import "common.rasi"
+
 configuration {
     show-icons: false;
 }

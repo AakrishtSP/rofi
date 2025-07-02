@@ -1,233 +1,72 @@
 /******************************************************************************
- * ROFI Color theme - Rosé Pine Enhanced
- * Colors adapted from: https://github.com/rose-pine/rose-pine
+ * Rose Pine Color Scheme for Rofi
+ * All natural pine, faux fur and a bit of soho vibes
  * Author: Aakrisht Sharma Paudel (AakrishtSP)
- * Github: @AakrishtSP
+ * Based on: https://github.com/rose-pine/rose-pine
  ******************************************************************************/
+
 * {
-    // Rosé Pine Color Palette
-    base:           #191724;
-    surface:        #1f1d2e;
-    overlay:        #26233a;
-    muted:          #6e6a86;
-    subtle:         #908caa;
-    text:           #e0def4;
-    love:           #eb6f92;
-    gold:           #f6c177;
-    rose:           #ebbcba;
-    pine:           #31748f;
-    foam:           #9ccfd8;
-    iris:           #c4a7e7;
-    highlight-low:  #21202e;
-    highlight-med:  #403d52;
-    highlight-high: #524f67;
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
 
-    // Derived Theme Variables
-    foreground:                  @text;
-    normal-foreground:           @text;
-    selected-normal-foreground:  @base;
-    urgent-foreground:           @love;
-    active-foreground:           @foam;
-    selected-urgent-foreground:  @base;
-    selected-active-foreground:  @base;
+******************************************************************************/
+
+    /* Rose Pine color palette */
+    rose-base:           #191724;
+    rose-surface:        #1f1d2e;
+    rose-overlay:        #26233a;
+    rose-muted:          #6e6a86;
+    rose-subtle:         #908caa;
+    rose-text:           #e0def4;
+    rose-love:           #eb6f92;
+    rose-gold:           #f6c177;
+    rose-rose:           #ebbcba;
+    rose-pine:           #31748f;
+    rose-foam:           #9ccfd8;
+    rose-iris:           #c4a7e7;
+    highlight-low:       #21202e;
+    highlight-med:       #403d52;
+    highlight-high:      #524f67;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
+    background:                  @rose-base;
+    background-color:            @rose-base;
+    foreground:                  @rose-text;
+    border-color:                @rose-muted;
+    separatorcolor:              @rose-muted;
     
-    background:                  @base;
-    normal-background:           @base;
-    selected-normal-background:  @rose;
-    urgent-background:           @base;
-    active-background:           @overlay;
-    selected-urgent-background:  @love;
-    selected-active-background:  @foam;
+    /* Text colors */
+    normal-background:           @rose-base;
+    normal-foreground:           @rose-text;
+    alternate-normal-background: @rose-surface;
+    alternate-normal-foreground: @rose-text;
+    selected-normal-background:  @rose-rose;
+    selected-normal-foreground:  @rose-base;
     
-    // Alternating pattern colors
-    alternate-normal-background: @surface;
-    alternate-normal-foreground: @normal-foreground;
-    alternate-urgent-background: @surface;
-    alternate-urgent-foreground: @urgent-foreground;
-    alternate-active-background: @surface;
-    alternate-active-foreground: @active-foreground;
+    active-background:           @rose-overlay;
+    active-foreground:           @rose-foam;
+    alternate-active-background: @rose-surface;
+    alternate-active-foreground: @rose-foam;
+    selected-active-background:  @rose-foam;
+    selected-active-foreground:  @rose-base;
     
-    separatorcolor:              @muted;
-    bordercolor:                 @muted;
-    border-color:                @muted;
-    
-    spacing:                     2;
-    background-color:            @base;
-    
-    highlight:                   @iris;
-    subtle-text:                 @subtle;
-}
-
-window {
-    background-color: @base;
-    border:           1;
-    border-color:     @muted;
-    border-radius:    8;
-    padding:          15;
-    width:            600;
-}
-
-mainbox {
-    border:  0;
-    padding: 0;
-}
-
-message {
-    border:        1;
-    border-color:  @muted;
-    padding:       8 0;
-    margin:        0 0 5 0;
-}
-
-textbox {
-    text-color: @text;
-    font:       "JetBrains Mono 12";
-}
-
-listview {
-    fixed-height: 0;
-    border:       1;
-    border-color: @muted;
-    spacing:      3;
-    scrollbar:    true;
-    padding:      8 0 0 0;
-    margin:       5 0;
-    dynamic:      true;
-}
-
-element {
-    border:  0;
-    padding: 8 12;
-    border-radius: 4;
-    margin:  2 0;
-}
-
-element-text {
-    background-color: inherit;
-    text-color:       inherit;
-    vertical-align:   0.5;
-}
-
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-    font:             "Fira Sans Bold 14";
-}
-
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-    border-left:      3;
-    border-color:     @highlight;
-    font:             "Fira Sans Bold 14";
-}
-
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-    border-left:      3;
-    border-color:     @gold;
-    font:             "Fira Sans Bold 14";
-}
-
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-    border-left:      3;
-    border-color:     @pine;
-    font:             "Fira Sans Bold 14";
-}
-
-element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-    font:             "Fira Sans 14";
-}
-
-element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-    font:             "Fira Sans Bold 14";
-}
-
-element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-    font:             "Fira Sans 14";
-}
-
-scrollbar {
-    width:        6;
-    border:       0;
-    handle-color: @iris;
-    handle-width: 8;
-    padding:      0;
-}
-
-inputbar {
-    spacing:    0;
-    text-color: @text;
-    padding:    10;
-    background: @surface;
-    border-radius: 6;
-    margin:     0 0 10 0;
-    children:   [ prompt, textbox-prompt-colon, entry, case-indicator ];
-}
-
-textbox-prompt-colon {
-    expand:     false;
-    str:        "🌹";
-    margin:     0 10 0 5;
-    text-color: @rose;
-    font:       "Symbols Nerd Font 16";
-}
-
-entry {
-    text-color:   @text;
-    font:         "Fira Sans 14";
-    cursor:       text;
-    cursor-color: @iris;
-}
-
-prompt {
-    text-color: @iris;
-    font:       "Fira Sans Bold 14";
-}
-
-case-indicator {
-    text-color: @subtle;
-    margin:     0 0 0 10;
-}
-
-mode-switcher {
-    border:       2;
-    border-color: @muted;
-    padding:      8;
-    margin:       10 0 0 0;
-}
-
-button {
-    padding:      5 10;
-    border-radius: 4;
-    font:         "Fira Sans 14";
-}
-
-button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-    border-bottom:    2;
-    border-color:     @iris;
-    font:             "Fira Sans Bold 14";
+    urgent-background:           @rose-base;
+    urgent-foreground:           @rose-love;
+    alternate-urgent-background: @rose-surface;
+    alternate-urgent-foreground: @rose-love;
+    selected-urgent-background:  @rose-love;
+    selected-urgent-foreground:  @rose-base;
 }

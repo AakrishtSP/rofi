@@ -1,0 +1,41 @@
+/**
+ * Grid Style - Based on common.rasi with grid layout for applications
+ */
+
+@import "common.rasi"
+
+window {
+    width: 800px;
+    height: 600px;
+}
+
+mainbox {
+    padding: 20px;
+    spacing: 15px;
+}
+
+listview {
+    columns: 4;
+    lines: 4;
+    layout: vertical;
+    spacing: 8px;
+    fixed-height: false;
+    fixed-columns: true;
+}
+
+element {
+    orientation: vertical;
+    padding: 16px;
+    spacing: 8px;
+    border-radius: 8px;
+}
+
+element-icon {
+    size: 48px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}

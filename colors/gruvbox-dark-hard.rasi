@@ -1,22 +1,21 @@
-/* ==========================================================================
-   Rofi color theme
-
-   Based on the Gruvbox color scheme for Vim by morhetz
-   https://github.com/morhetz/gruvbox
-
-   File: gruvbox-dark-hard.rasi
-   Desc: Gruvbox dark (hard contrast) color theme for Rofi
-   Author: bardisty <b@bah.im>
-   Source: https://github.com/bardisty/gruvbox-rofi
-   Modified: Mon Feb 12 2018 06:04:26 PST -0800
-   ========================================================================== */
+/******************************************************************************
+ * Gruvbox Dark Hard Color Scheme for Rofi
+ * Dark hard contrast theme based on the Gruvbox color scheme
+ * Author: bardisty <b@bah.im>
+ * Source: https://github.com/bardisty/gruvbox-rofi
+ ******************************************************************************/
 
 * {
-    /* Theme settings */
-    highlight: bold italic;
-    scrollbar: true;
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
 
-    /* Gruvbox dark colors */
+******************************************************************************/
+
+    /* Gruvbox dark hard palette */
     gruvbox-dark-bg0-hard:     #1d2021;
     gruvbox-dark-bg0:          #282828;
     gruvbox-dark-bg2:          #504945;
@@ -28,7 +27,16 @@
     gruvbox-dark-yellow-light: #fabd2f;
     gruvbox-dark-gray:         #a89984;
 
-    /* Theme colors */
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
     background:                  @gruvbox-dark-bg0-hard;
     background-color:            @background;
     foreground:                  @gruvbox-dark-fg1;
@@ -36,6 +44,7 @@
     separatorcolor:              @border-color;
     scrollbar-handle:            @border-color;
 
+    /* Text colors */
     normal-background:           @background;
     normal-foreground:           @foreground;
     alternate-normal-background: @gruvbox-dark-bg0;
@@ -57,5 +66,3 @@
     selected-urgent-background:  @gruvbox-dark-red-light;
     selected-urgent-foreground:  @urgent-foreground;
 }
-
-@import "gruvbox-common.rasinc"
