@@ -1,0 +1,225 @@
+/******************************************************************************
+ * ROFI Color theme - Everforest Enhanced
+ * Colors adapted from: https://github.com/sainnhe/everforest
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Github: @AakrishtSP
+ ******************************************************************************/
+* {
+    // Everforest Color Palette
+    forest-dark:    #323D43;
+    tree-bark:      #3C474D;
+    deep-woods:     #2D353B;
+    warm-cream:     #DAD1BE;
+    soft-beige:     #D3C6AA;
+    sage-green:     #7FBBB3;
+    forest-green:   #A7C080;
+    autumn-pink:    #D699B6;
+    mystic-purple:  #DBBC7F;
+    river-blue:     #83C092;
+    branch-gray:    #859289;
+    shadow-moss:    #4F585E;
+
+    // Derived Theme Variables
+    foreground:                  @warm-cream;
+    normal-foreground:           @warm-cream;
+    selected-normal-foreground:  @forest-dark;
+    urgent-foreground:           #E67E80;
+    active-foreground:           @forest-green;
+    selected-urgent-foreground:  @forest-dark;
+    selected-active-foreground:  @forest-dark;
+    
+    background:                  @forest-dark;
+    normal-background:           @forest-dark;
+    selected-normal-background:  @sage-green;
+    urgent-background:           @forest-dark;
+    active-background:           @branch-gray;
+    selected-urgent-background:  #E67E80;
+    selected-active-background:  @forest-green;
+    
+    // Alternating pattern colors
+    alternate-normal-background: @tree-bark;
+    alternate-normal-foreground: @normal-foreground;
+    alternate-urgent-background: @tree-bark;
+    alternate-urgent-foreground: @urgent-foreground;
+    alternate-active-background: @tree-bark;
+    alternate-active-foreground: @active-foreground;
+    
+    separatorcolor:              @shadow-moss;
+    bordercolor:                 @shadow-moss;
+    border-color:                @shadow-moss;
+    
+    spacing:                     2;
+    background-color:            @forest-dark;
+    
+    highlight:                   @autumn-pink;
+    subtle-text:                 @soft-beige;
+}
+
+window {
+    background-color: @forest-dark;
+    border:           1;
+    border-color:     @shadow-moss;
+    border-radius:    8;
+    padding:          15;
+    width:            600;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:        1;
+    border-color:  @shadow-moss;
+    padding:       8 0;
+    margin:        0 0 5 0;
+}
+
+textbox {
+    text-color: @warm-cream;
+    font:       "JetBrains Mono 12";
+}
+
+listview {
+    fixed-height: 0;
+    border:       1;
+    border-color: @shadow-moss;
+    spacing:      3;
+    scrollbar:    true;
+    padding:      8 0 0 0;
+    margin:       5 0;
+    dynamic:      true;
+}
+
+element {
+    border:  0;
+    padding: 8 12;
+    border-radius: 4;
+    margin:  2 0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+    font:             "Fira Sans 14";
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+    font:             "Fira Sans Bold 14";
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+    font:             "Fira Sans 14";
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+    border-left:      3;
+    border-color:     @highlight;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+    border-left:      3;
+    border-color:     @autumn-pink;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+    border-left:      3;
+    border-color:     @river-blue;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @normal-foreground;
+    font:             "Fira Sans 14";
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @urgent-foreground;
+    font:             "Fira Sans Bold 14";
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @active-foreground;
+    font:             "Fira Sans 14";
+}
+
+scrollbar {
+    width:        6;
+    border:       0;
+    handle-color: @mystic-purple;
+    handle-width: 8;
+    padding:      0;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @warm-cream;
+    padding:    10;
+    background: @tree-bark;
+    border-radius: 6;
+    margin:     0 0 10 0;
+    children:   [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        "❯";
+    margin:     0 10 0 5;
+    text-color: @mystic-purple;
+    font:       "Symbols Nerd Font 16";
+}
+
+entry {
+    text-color:   @warm-cream;
+    font:         "Fira Sans 14";
+    cursor:       text;
+    cursor-color: @sage-green;
+}
+
+prompt {
+    text-color: @sage-green;
+    font:       "Fira Sans Bold 14";
+}
+
+case-indicator {
+    text-color: @soft-beige;
+    margin:     0 0 0 10;
+}
+
+mode-switcher {
+    border:       2;
+    border-color: @shadow-moss;
+    padding:      8;
+    margin:       10 0 0 0;
+}
+
+button {
+    padding:      5 10;
+    border-radius: 4;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+    border-bottom:    2;
+    border-color:     @sage-green;
+}
