@@ -43,9 +43,11 @@ while true; do
                 apply_theme "$THEME"
                 rm -f "$BACKUP_FILE"
                 notify-send "Rofi" "Theme applied: $THEME"
+                exit 0
             else
                 restore_backup
                 notify-send "Rofi" "No theme selected"
+                exit 1
             fi
             break
             ;;
@@ -61,11 +63,12 @@ while true; do
             # Escape or other - cancel and restore
             restore_backup
             notify-send "Rofi" "Theme selection cancelled"
-            break
+            exit 1
             ;;
     esac
 done
 
 # Clean up
 rm -f "$BACKUP_FILE"
+exit 0
 
